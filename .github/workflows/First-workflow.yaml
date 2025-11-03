@@ -1,11 +1,10 @@
-name : first-workflow
+name: First Workflow
 
-on push:
+on: push   # Trigger when code is pushed
 
-
-jobs :
-   job1:
-   runs-on: ubuntu-latest
-   steps:
-    - name: hello-wolrd
-      run: echo "hello world"
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest    # Use GitHub-hosted runner
+    steps:
+      - name: Print greeting
+        run: echo "👋 Hello from GitHub Actions!"
