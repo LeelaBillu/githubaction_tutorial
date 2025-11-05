@@ -1,11 +1,11 @@
 name : first-workflow
 
-on : 
+on: 
    push:
     branches: 
      - main
 
-jobs :
+jobs:
   hello-job:
      runs-on: ubuntu-latest
      steps: 
