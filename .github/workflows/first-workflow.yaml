@@ -3,7 +3,7 @@ name: Run Python App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   run-python:
