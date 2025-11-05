@@ -1,13 +1,41 @@
-name : first-workflow
+name: Run Python App
 
-on: 
-   push:
-    branches: 
-     - master
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  hello-job:
-     runs-on: ubuntu-latest
-     steps: 
-       - name: print-greeting
-         run : echo "hello-world"
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Python script
+        run: python app.py
+
+
+
+
+
+
+
+# name : first-workflow
+
+# on: 
+#    push:
+#     branches: 
+#      - master
+
+# jobs:
+#   hello-job:
+#      runs-on: ubuntu-latest
+#      steps: 
+#        - name: print-greeting
+#          run : echo "hello-world"
